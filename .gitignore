@@ -1,0 +1,52 @@
+# Python virtual environments
+venv/
+env/
+.venv/
+ENV/
+backend/venv/
+backend/.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Environment variables & secrets
+.env
+.env.*
+backend/.env
+backend/.env.*
+!.env.example
+
+# Database
+db.sqlite3
+db.sqlite3-journal
+backend/db.sqlite3
+backend/db.sqlite3-journal
+
+# Django logs & local settings
+*.log
+local_settings.py
+
+# Uploaded files and resumes
+backend/media/*
+!backend/media/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Generated files
+*.timestamp-*.mjs
+pip_out.txt
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

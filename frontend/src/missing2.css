@@ -1,0 +1,216 @@
+/* =========================================
+   MISSING UI STYLES 2: Auth, Navbar, Layout Fixes
+   ========================================= */
+
+/* GLOBAL LAYOUT FIX FOR SIDEBAR */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.app-main {
+  flex: 1;
+  margin-left: 260px; /* Offset for fixed sidebar */
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+.page-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVBAR (Public) */
+.public-navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.brand-icon {
+  background: var(--primary-600);
+  border-radius: 0.5rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-brand .brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+}
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+.navbar-auth-buttons, .navbar-user-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--gray-600);
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+.btn-ghost:hover {
+  background: var(--gray-100);
+  border-radius: 0.5rem;
+  color: var(--gray-900);
+}
+
+/* AUTHENTICATION PAGES */
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-50) 0%, #f8fafc 100%);
+  display: flex;
+  flex-direction: column;
+}
+.auth-card-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.auth-card {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.auth-icon-circle {
+  width: 64px;
+  height: 64px;
+  background: var(--primary-50);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+.auth-header h2 {
+  font-size: 1.75rem;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+.auth-header p {
+  color: var(--gray-500);
+  font-size: 0.95rem;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--gray-400);
+}
+.form-control {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background: var(--gray-50);
+}
+.input-with-icon .form-control {
+  padding-left: 2.75rem;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  background: #fff;
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+.btn-block {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.auth-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+.auth-link {
+  color: var(--primary-600);
+  font-weight: 600;
+}
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* MISC ALERTS */
+.alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.alert-danger {
+  background: var(--danger-50);
+  color: var(--danger-700);
+  border: 1px solid var(--danger-200);
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    margin-left: 0;
+  }
+  .app-sidebar {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,22 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables & secrets
+.env
+.env.*
+
+# SQLite Database
+db.sqlite3
+db.sqlite3-journal
+
+# Uploaded media
+media/*
+!media/.gitkeep
+
